@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación de lista de tareas desarrollada con **React**, **TypeScript** y **Vite**. Permite a los usuarios agregar y eliminar tareas de manera sencilla.
 
+Prueba el proyecto aquí: listar-tareas-react-ts.netlify.app
+
 ## Características
 
 - **React + TypeScript**: Aprovecha las ventajas de React con tipado estático.
