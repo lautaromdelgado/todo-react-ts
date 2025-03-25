@@ -1,54 +1,84 @@
-# React + TypeScript + Vite
+# Tareas Pendientes - React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación de lista de tareas desarrollada con **React**, **TypeScript** y **Vite**. Permite a los usuarios agregar y eliminar tareas de manera sencilla.
 
-Currently, two official plugins are available:
+[Prueba el proyecto aquí](https://listar-tareas-react-ts.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
 
-## Expanding the ESLint configuration
+- **React + TypeScript**: Aprovecha las ventajas de React con tipado estático.
+- **Vite**: Configuración rápida y eficiente para desarrollo y construcción.
+- **Componentes reutilizables**: Componentes como `Tarea` y `ListaTareas` para una estructura modular.
+- **Estilos personalizados**: Diseño simple y funcional con CSS.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Estructura del Proyecto
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+├── public/                # Archivos estáticos
+├── src/                   # Código fuente
+│   ├── components/        # Componentes React
+│   │   ├── TodoApp.tsx    # Componente principal
+│   │   ├── listaTareas.tsx # Lista de tareas
+│   │   └── tarea.tsx      # Componente de tarea individual
+│   ├── styles.css         # Estilos globales
+│   ├── main.tsx           # Punto de entrada de la aplicación
+│   └── vite-env.d.ts      # Tipos de Vite
+├── .gitignore             # Archivos ignorados por Git
+├── index.html             # Archivo HTML principal
+├── package.json           # Dependencias y scripts
+├── tsconfig.json          # Configuración de TypeScript
+├── vite.config.ts         # Configuración de Vite
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Instalación
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clona este repositorio:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/tu-usuario/tareas-pendientes-react-ts.git
+   cd tareas-pendientes-react-ts
+   ```
+
+2. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+## Scripts Disponibles
+
+- `npm run dev`: Inicia el servidor de desarrollo.
+- `npm run build`: Construye la aplicación para producción.
+- `npm run preview`: Previsualiza la aplicación construida.
+- `npm run lint`: Ejecuta ESLint para analizar el código.
+
+## Uso
+
+1. Ejecuta el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+2. Abre tu navegador en [http://localhost:5173](http://localhost:5173).
+
+3. Agrega tareas en el campo de texto y elimínalas con el botón correspondiente.
+
+## Tecnologías Utilizadas
+
+- **React**: Biblioteca para construir interfaces de usuario.
+- **TypeScript**: Superset de JavaScript con tipado estático.
+- **Vite**: Herramienta de desarrollo rápida y ligera.
+- **ESLint**: Linter para mantener la calidad del código.
+
+## Personalización
+
+Puedes modificar los estilos en el archivo [`src/styles.css`](src/styles.css) para personalizar el diseño de la aplicación.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras algún problema o tienes una idea para mejorar la aplicación, no dudes en abrir un issue o enviar un pull request.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
